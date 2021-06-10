@@ -1,0 +1,68 @@
+@mixin MediaQueries($mediaquery) {
+    @media #{$mediaquery} {
+        @content;
+    }
+}
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// Values: nowrap (default) | wrap | wrap-reverse
+@mixin flex-wrap($value: nowrap) {
+    -webkit-flex-wrap: $value;
+    @if $value == nowrap {
+      -ms-flex-wrap: none;
+    } @else {
+      -ms-flex-wrap: $value;
+    }
+    flex-wrap: $value;
+}
+
+// Values: flex-start (default) | flex-end | center | space-between | space-around
+@mixin justify-content($value: flex-start) {
+    @if $value == flex-start {
+      -webkit-box-pack: start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+    } @else if $value == flex-end {
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+    } @else if $value == space-between {
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+    } @else if $value == space-around {
+      -ms-flex-pack: distribute;
+    } @else {
+      -webkit-box-pack: $value;
+      -moz-box-pack: $value;
+      -ms-flex-pack: $value;
+    }
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin font($fontSize, $fontWeight, $color, $line-height: '1.15', $letter-spacing: '0px') {
+    font-family: $open-sans;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+    @if $line-height=='1.15' {
+        line-height: 1.15;
+    }
+    @else {
+        line-height: $line-height;
+    }
+    @if $letter-spacing=='0px' {
+        letter-spacing: 0px;
+    }
+    @else {
+        letter-spacing: $letter-spacing;
+    }
+}

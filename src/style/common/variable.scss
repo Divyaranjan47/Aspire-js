@@ -1,0 +1,53 @@
+// colors
+$vue-blue: #42b983;
+$background-blue: #0C365A;
+$blue-text: #23CEFD;
+$card-color: #01D167;
+$white: #ffffff;
+$light-blue: #FAFCFF;
+$sky-blue: #EDF3FF;
+$blue-round: #009DFF1A;
+$green-round: #00D6B51A;
+$red-round: #F251951A;
+$blue-card: #325BAF;
+$border-grey: #F0F0F0;
+$green-btn: #EDFFF5;
+$border-green: #DDFFEC;
+$grey-text: #DDDDDD;
+$black-text: #222222;
+$grey-date: #AAAAAA;
+$error-text: #f50057;
+
+// z-index
+$index1: 1;
+$index2: 2;
+$index3: 3;
+$index4: 4;
+
+//font-family
+$open-sans: 'Open Sans';
+
+//font-size
+$font-9: 0.9rem;
+$font-12: 1.2rem;
+$font-13: 1.3rem;
+$font-14: 1.4rem;
+$font-15: 1.5rem;
+$font-16: 1.6rem;
+$font-22: 2.2rem;
+$font-24: 2.4rem;
+
+
+// font-weight
+$font-semibold: 600;
+$font-bold: 900;
+$font-regular: 300;
+
+//breakpoints
+$mq__medium-max: 64em; //64*16 = 1024px
+$mq__large: ($mq__medium-max + 1); // 1025px
+
+$screen: unquote("only screen");
+
+$desktop-and-above: unquote("#{$screen} and (min-width: #{$mq__large})"); //>=1025
+$tablet-and-below: unquote("#{$screen} and (max-width: #{$mq__medium-max})"); //<=1024
